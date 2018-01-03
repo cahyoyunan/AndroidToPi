@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android to Pi</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="chk_lbl_input">Is input</string>
+    <string name="dev">developer</string>
+    <string name="cahyo">WLAN Mode</string>
+	<string name="cahyo2">Internet Mode</string>
+	<string name="cahyo3">SMS Mode</string>
+	<string name="trademark">AndroidToPi V2.1 Developed By Cahyo YA</string>
+	<string name="teruskan">Teruskan</string>
+	 <string name="hapuspesan">Hapus Pesan</string>
+</resources>

@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+       android:background="#ffffffff"
+  
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/lokal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:text="WLAN Mode" />
+
+    <Button
+        android:id="@+id/internet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lokal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="Internet Mode" />
+
+    <Button
+        android:id="@+id/pesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/internet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Sms Mode" />
+
+    <Button
+        android:id="@+id/logpesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pesan"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="39dp"
+        android:layout_toRightOf="@+id/exit"
+        android:text="Log SMS" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/exit"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo2" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="8dp"
+        android:text="AndroidToPi V2.1 Cahyo YA" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/logpesan"
+        android:layout_alignBottom="@+id/logpesan"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_marginLeft="35dp"
+        android:text="Exit" />
+
+</RelativeLayout>

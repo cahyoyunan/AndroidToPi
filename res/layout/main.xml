@@ -1,0 +1,61 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="wrap_content"
+   android:background="#ffffffff"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="6dp"
+        android:layout_y="43dp"
+        android:text="Silahkan Login Terlebih Dahulu"
+        android:textSize="100px" />
+
+    <Button
+        android:id="@+id/buttonSignIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="139dp"
+        android:layout_y="100dp"
+        android:onClick="signIn"
+        android:text="Sign In" />
+
+    <Button
+        android:id="@+id/buttonSignUP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="142dp"
+        android:layout_y="250dp"
+        android:text="Sign Up" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        android:layout_x="63dp"
+        android:layout_y="296dp"
+        android:src="@drawable/logo2" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:layout_x="12dp"
+        android:layout_y="488dp"
+        android:text="@string/trademark"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="346dp"
+        android:layout_height="wrap_content"
+        android:layout_x="7dp"
+        android:layout_y="154dp"
+        android:text="Bila tidak mempunyai id buat lah id terlebih dahulu"
+        android:textSize="100px" />
+
+</AbsoluteLayout>

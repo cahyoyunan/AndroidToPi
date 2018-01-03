@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="duapuluh">20px</dimen>
+    <dimen name="sepuluh">10px</dimen>
+    <dimen name="lima">5px</dimen>
+    <dimen name="limapuluh">50px</dimen>
+    <dimen name="seratus">100px</dimen>
+    <dimen name="limapuluh2">50px</dimen>
+
+</resources>
