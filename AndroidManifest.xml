@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.example.gpiotest"
+    android:versionCode="1"
+    android:versionName="1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    
+    
+    
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="HomeActivity"
+            android:label="Android To Pi (Sign In)" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <receiver android:name=".SmsReceiver"
+                android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_DELIVER" />
+            </intent-filter>
+        </receiver>
+        
+         <receiver
+   		 android:name="com.shinobicontrols.messageme.receivers.MMSBroadcastReceiver"
+   		 android:permission="android.permission.BROADCAST_WAP_PUSH" >
+  	  <intent-filter>
+        <action android:name="android.provider.Telephony.WAP_PUSH_DELIVER" />
+        <data android:mimeType="application/vnd.wap.mms-message" />
+  	  </intent-filter>
+	</receiver>
+         
+         <!-- Activity for composing SMS/MMS messages -->
+<activity
+    android:name="com.shinobicontrols.messageme.ComposeSMSActivity"
+    android:label="@string/app_name" >
+    <intent-filter>
+        <action android:name="android.intent.action.SEND" />
+        <action android:name="android.intent.action.SENDTO" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="sms" />
+        <data android:scheme="smsto" />
+        <data android:scheme="mms" />
+        <data android:scheme="mmsto" />
+    </intent-filter>
+</activity>
+
+<!-- Service that delivers messages for "Quick Response" -->
+<service
+    android:name="com.shinobicontrols.messageme.HeadlessSmsSendService"
+    android:exported="true"
+    android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE" >
+    <intent-filter>
+        <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:scheme="sms" />
+        <data android:scheme="smsto" />
+        <data android:scheme="mms" />
+        <data android:scheme="mmsto" />
+    </intent-filter>
+</service>
+         
+        
+        <activity android:name="SignUPActivity" />
+        <activity android:name="mode" android:label="Android To Pi (Mode)"></activity><activity android:name="MainActivity" android:label="Android To Pi (WLAN Mode)"></activity>
+        <activity android:name="MainActivity2" android:label="Android To Pi (Internet Mode)"></activity>
+        <activity android:name="MainActivity3" android:label="Android To Pi (SMS Mode)"></activity>
+        <activity android:name="DataPesan"></activity><activity android:name="camera" android:label="Android To Pi (IP Camera WLAN)"></activity>
+        <activity android:name="camera2" android:label="Android To Pi (IP Camera Internet)"></activity>
+        
+        
+      
+       
+    </application>
+
+</manifest>
